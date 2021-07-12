@@ -21,12 +21,12 @@ The main objective of the segmentation phase is to remove the background and noi
 <h3>Feature Extraction:</h3>
 The Oriented FAST and rotated BRIEF (ORB) technique is used to extract descriptors from the segmented hand gesture images. ORB is a novel feature extraction method which is robust against rotation, scaling, occlusion and variation in viewpoint.
 
-<h3> Classification</h3>
+<h2> Classification</h2>
 The ORB descriptors extracted from each image are different in number with the same dimension (64). However, a multiclass SVM requires uniform dimensions of feature vector as its input. Bag of Features (BoF) is therefore implemented to represent the features in histogram of visual vocabulary rather than the features as proposed. The descriptors extracted are first quantized into 150 clusters using K-means clustering. Given a set of descriptors, where K-means clustering categorizes numbers of descriptors into K numbers of cluster center.
 
 The clustered features then form the visual vocabulary where each feature corresponds to an individual sign language gesture. With the visual vocabulary, each image is represented by the frequency of occurrence of all clustered features. BoF represents each image as a histogram of features, in this case the histogram of 24 classes of sign languages gestures. 
 
- <h3>Bag of Features model</h3>
+ <h2>Bag of Features model</h2
 
 Following Steps are followed to achieve this:
 
@@ -38,7 +38,7 @@ Following Steps are followed to achieve this:
 
 * BoF represents each image as a histogram of features, in our case the histogram of 24 classes of sign language is generated.
 
- Classifiers
+<h2 Classifiers</h2
 
 After obtaining the bag of features model, we are set to predict results for new raw images to test our model. Following classifiers are used :
 + Naive Bayes
